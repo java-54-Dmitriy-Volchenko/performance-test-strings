@@ -8,10 +8,11 @@ public class SymbolRemovePerformance extends PerformanceTest {
 	char symbol;
 	RemoveSymbol symbolRemove ;
 	public SymbolRemovePerformance(String displayName, int nRuns,
-			RemoveSymbol symbolRemove, String str) {
+			RemoveSymbol symbolRemove, String str, char symbol) {
 		super(displayName, nRuns);
 		this.symbolRemove = symbolRemove;
 		this.str = str;
+		this.symbol = symbol;
 			}
 	
 	@Override
