@@ -1,6 +1,6 @@
 package telran.symbols;
 
-public class SymbolsRemoveStandard implements RemoveSymbol {
+public class SymbolsRemoveStandart implements RemoveSymbol {
 
 	@Override
 	public String removeSymbol(String str, char symbol) {
