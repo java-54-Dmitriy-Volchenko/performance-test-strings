@@ -1,6 +1,6 @@
 package telran.performance.symbols;
 
-import java.util.Random;
+
 import telran.performance.PerformanceTest;
 import telran.symbols.RemoveSymbol;
 
@@ -10,21 +10,16 @@ public class SymbolRemovePerformance extends PerformanceTest {
     RemoveSymbol symbolRemove;
 
     public SymbolRemovePerformance(String displayName, int nRuns,
-            RemoveSymbol symbolRemove, String str) {
+            RemoveSymbol symbolRemove, String str, char symbol) {
         super(displayName, nRuns);
         this.symbolRemove = symbolRemove;
         this.str = str;
-        this.symbol = getRandomAsciiSymbol();
+        this.symbol = symbol;
     }
 
     @Override
     protected void runTest() {
         symbolRemove.removeSymbol(str, symbol);
     }
-//got method from chatGPT
-    private char getRandomAsciiSymbol() {
-        Random random = new Random();
-        int randomNumber = random.nextInt(126 - 32 + 1) + 32;
-        return (char) randomNumber;
-    }
+
 }
